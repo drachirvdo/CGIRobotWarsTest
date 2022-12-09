@@ -8,14 +8,12 @@ namespace CGIRobotWars.Test
     public class RobotWarsTests
     {
         private Mock<IBattleGrid>? _mockBattleGrid;
-        private Mock<IWarRobot>? _mockWarRobot;
         private IDictionary<char, CurrentWarRobotOrientation>? _orientationDictionary;
 
         [SetUp]
         public void Setup()
         {
             _mockBattleGrid = new Mock<IBattleGrid>();
-            _mockWarRobot = new Mock<IWarRobot>();
         }
 
         [TestCase("5 5", "1 2 N", "LMLMLMLMM", 1, 3, CurrentWarRobotOrientation.North)]
